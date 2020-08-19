@@ -5,7 +5,7 @@ require 'slack-ruby-client'
 
 
 Slack.configure do |config|
-  config.token = "xoxb-2551775506-1309699910771-IVfzyasOesvkuTcnEzjPqCg5"
+  config.token = "xoxb-2551775506-1307095574436-3qAdBhYlL4FjhFwd1SS23Yu3"
 end
 
 client = Slack::Web::Client.new
@@ -20,8 +20,8 @@ post '/webhook' do
   command = params[:command]
   text = params[:text]
   case command
-  when "/vim" then
-    client.chat_postMessage(channel: '#x-test', text: 'Hello World', as_user: true)
+  when "/emacs" then
+    client.chat_postMessage(channel: channel_id, text: 'Hello World', as_user: true)
   end
   
 "good"
