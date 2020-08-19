@@ -9,7 +9,6 @@ Slack.configure do |config|
 end
 
 client = Slack::Web::Client.new
-client.auth_test
 
 get '/' do
     "Hello World!"
