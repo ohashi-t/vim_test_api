@@ -5,7 +5,7 @@ require 'slack-ruby-client'
 
 
 Slack.configure do |config|
-  config.token = "xoxb-2551775506-1307095574436-6YeZhBMlIr46YL3AC2Nqh5Yq"
+  config.token = "xoxb-2551775506-1309699910771-IVfzyasOesvkuTcnEzjPqCg5"
 end
 
 client = Slack::Web::Client.new
