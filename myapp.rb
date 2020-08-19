@@ -2,10 +2,13 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pry'
 require 'slack-ruby-client'
+require 'dotenv'
+
+Dotenv.load
 
 
 Slack.configure do |config|
-  config.token = "xoxb-2551775506-1307095574436-da38auoMlG8sQWYmKomOE3KR"
+  config.token = ENV["SLACK_API_TOKEN"]
 end
 
 client = Slack::Web::Client.new
